@@ -1,0 +1,430 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hrCstm {
+  color: white;
+  margin-top: -70px;
+  height: 8px;
+  border: none;
+  background-color: rgb(34, 34, 34);
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 160px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  margin-top: 55px;
+}
+
+.netflixLogo img {
+  width: 160px;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+.language select {
+  width: 200px;
+  height: 34px;
+  padding: 8px 30px 8px 16px;
+  background-color: rgba(51, 51, 51, 0.26);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.247);
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  appearance: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.language select:focus {
+  outline: 2px solid white;
+}
+
+.upperContent input:focus {
+  outline: 3px solid white;
+}
+
+.signIn #sign-in-button {
+  padding: 8px 16px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  width: auto;
+  height: auto;
+  margin-right: 20px;
+  transition: 0.3s ease;
+}
+
+.signIn #sign-in-button:hover {
+  background-color: #bc0b14;
+}
+
+.upperbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  margin-top: -59px;
+  overflow: hidden;
+}
+
+.upperbg img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin-top: 54px;
+}
+
+.upperContent {
+  text-align: center;
+  max-width: 800px;
+  color: white;
+}
+
+.upperContent h1 {
+  margin-top: 90px;
+  font-size: 44px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  margin-left: -70px;
+}
+
+.upperContent p {
+  font-size: 25px;
+  margin-bottom: 24px;
+}
+
+.upperContent input,
+.faqDown input {
+  padding: 10px;
+  width: 350px;
+  margin-right: 5px;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc5d;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.61);
+  height: 56px;
+}
+
+.upperContent button,
+.faqDown button {
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 215px;
+  height: 54px;
+}
+
+.upperContent button:hover,
+.faqDown button:hover {
+  background-color: #bc0b14;
+}
+
+.content1 {
+  padding: 50px 12%;
+  font-size: 22px;
+  margin-top: -70px;
+  margin-top: -20px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.textCol {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.textCol h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.textCol p {
+  font-size: 24px;
+}
+
+.imgCol {
+  flex-basis: 50%;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.content1 .imgCol img {
+  display: inline-block;
+  width: 95%;
+}
+
+.faq {
+  padding: 10px 8%;
+  text-align: center;
+}
+
+.faq h2 {
+  margin-top: 55px;
+  font-weight: 900;
+  font-size: 45px;
+}
+
+.faqList {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 10px;
+}
+
+.faqList li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.faqList li label {
+  display: flex;
+  align-items: center;
+  padding: 26px;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: #303030e3;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+label::after {
+  content: "+";
+  font-size: 34px;
+  position: absolute;
+  right: 25px;
+  transition: transform 0.5s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.faqList .content {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+  font-size: 24px;
+}
+
+.faqList input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.faqList input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+
+.faqDown {
+  text-align: center;
+}
+
+.faqDown button {
+  margin-top: 15px;
+}
+
+.footer {
+  padding: 50px 15% 10px;
+}
+
+.footer h2,
+.footer a {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #b5b5b5;
+}
+
+.footer .col {
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.footer .col a {
+  display: block;
+  color: #b5b5b5;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.footer .row {
+  align-items: flex-start;
+  padding: 10px;
+}
+
+@media (max-width: 1200px) {
+    .header {
+      padding: 20px 80px;
+    }
+  
+    .content1 {
+      padding: 50px 8%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 40px;
+    }
+  
+    .header .netflixLogo img {
+      width: 140px;
+    }
+  
+    .nav {
+      margin-top: 20px;
+    }
+  
+    .upperContent h1 {
+      font-size: 38px;
+      margin-left: 0;
+    }
+  
+    .upperContent p {
+      font-size: 22px;
+    }
+  
+    .upperContent input,
+    .faqDown input {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .upperContent button,
+    .faqDown button {
+      width: 100%;
+    }
+  
+    .textCol h2 {
+      font-size: 45px;
+    }
+  
+    .textCol p {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      padding: 20px 20px;
+    }
+  
+    .header .netflixLogo img {
+      width: 120px;
+    }
+  
+    .upperContent h1 {
+      font-size: 32px;
+    }
+  
+    .upperContent p {
+      font-size: 20px;
+    }
+  
+    .textCol h2 {
+      font-size: 40px;
+    }
+  
+    .textCol p {
+      font-size: 20px;
+    }
+  
+    .content1 {
+      padding: 50px 5%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header {
+      padding: 20px 10px;
+    }
+  
+    .header .netflixLogo img {
+      width: 100px;
+    }
+  
+    .upperContent h1 {
+      font-size: 28px;
+    }
+  
+    .upperContent p {
+      font-size: 18px;
+    }
+  
+    .textCol h2 {
+      font-size: 35px;
+    }
+  
+    .textCol p {
+      font-size: 18px;
+    }
+  
+    .content1 {
+      padding: 50px 2%;
+    }
+  
+    .row {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .imgCol {
+      text-align: center;
+    }
+  
+    .imgCol img {
+      width: 100%;
+    }
+  }
